@@ -158,21 +158,19 @@ std::vector<int> AllSubsetSums(std::vector<int>& S, int u) {
             R = XORSubsetSums(R, Rl, u);
         }
     }
-
+    removeDuplicates(R);
     return R;
 }
 int main() {
     std::vector<int> S = {1, 2, 3, 4}; // Example input set
     int u = 10; // Upper bound
 
-    std::vector<SubsetSum> subsetSums = AllSubsetSumsHash(S, u);
-
-
-    for (const auto& subset : subsetSums) {
-        std::cout << "Subset Sum: " << subset.sum << ", Cardinality: " << subset.cardinality << std::endl;
+    // Display the subset sums
+    std::vector<int> result = AllSubsetSums(S, u);
+    std::cout << "Subset Sums:" << std::endl;
+    for (int sum : result) {
+        std::cout << sum << " ";
     }
-
-    int length = subsetSums.size();
-    std::cout << "Length of subsetSums: " << length << std::endl;
+    std::cout << std::endl << "Length of subsetSums: " << result.size() << std::endl;
     return 0;
 }
