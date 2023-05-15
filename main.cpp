@@ -232,6 +232,7 @@ struct InputData openfile(const char* file_path)
 
 int main( int argc, char *argv[] )
 {
+/*
     const char* defaultPath = "./samples/p06.txt";
     if( argc < 2 )
     {
@@ -242,7 +243,12 @@ int main( int argc, char *argv[] )
 
     struct InputData data;
     data = openfile( path );
+*/
 
+    struct InputData data;
+    std::vector<int> _data = {1, 2, 4, 8, 16, 32};
+    data.target = 22;
+    for (int i = 0; i < 6; i++) data.S = _data;
     std::cout << "Target: " << data.target << std::endl;
     std::cout << "Set: { ";
     for ( int x : data.S ) { std::cout << x << " "; }
