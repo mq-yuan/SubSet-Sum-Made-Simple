@@ -129,6 +129,13 @@ std::vector<SubsetSum> AllSubsetSumsHash( std::vector<int>& S, int u )
         subset2.cardinality = 1;
         return { subset1, subset2 };
     }
+    else if ( n == 0 )
+    {
+        SubsetSum subset1;
+        subset1.sum = 0;
+        subset1.cardinality = 0;
+        return {subset1};
+    }
 
     // Step 3: Choose an arbitrary subset T of S of size n/2
     std::vector<int> T( S.begin( ), S.begin( ) + n / 2 );
