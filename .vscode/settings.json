@@ -1,0 +1,173 @@
+
+{
+    "workbench.sideBar.location": "left",
+    "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?·～！￥…（）—【】、；：‘’“”，。《》？ ",
+    "files.defaultLanguage": "c++", // ctrl+N新建文件后默认的语言
+    "editor.formatOnType": false, // （对于C/C++）输入分号后自动格式化当前这一行的代码
+    "editor.suggest.snippetsPreventQuickSuggestions": true, // clangd的snippets有很多的跳转点，不用这个就必须手动触发Intellisense了
+    "editor.acceptSuggestionOnEnter": "off", // 我个人的习惯，按回车时一定是真正的换行，只有tab才会接受Intellisense
+    "editor.snippetSuggestions": "inline", // （可选）snippets显示在补全列表顶端，默认是inline
+    "C_Cpp.clang_format_sortIncludes": true, // 格式化时调整include的顺序（按字母排序）
+    "C_Cpp.autocomplete": "Default", // 同上；这几条也可以考虑放到全局里，否则很多错误会报两遍，cpptools一遍clangd一遍
+    "C_Cpp.suggestSnippets": true, // 同上
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 12, // 同上
+    "editor.fontLigatures": true, // 连体字，效果不太好形容，见 https://typeof.net/Iosevka 最后一部分
+    "editor.minimap.enabled": true, // 我个人不用minimap，就是右边那个东西
+    "editor.dragAndDrop": false, // 选中文字后，可以拖动它们调整位置。我是不需要
+    "editor.cursorSmoothCaretAnimation": "on", // 移动光标时变得平滑
+    "editor.smoothScrolling": false, // 滚动平滑，不过效果很微弱
+    "files.trimTrailingWhitespace": true, // 保存时，删除每一行末尾的空格
+    "files.insertFinalNewline": true, // 保存后文件最末尾加一整行空行，Linux下的习惯
+    "files.autoGuessEncoding": true, // 启用后，会在打开文件时尝试猜测字符集编码。我关闭的理由见6，默认也是禁用的
+    "workbench.settings.useSplitJSON": false, // 恢复手动编辑时的两列设置
+    "window.zoomLevel": -1, // 整体放大
+    "git.enabled": true, // 如果你不用git，可以考虑关闭它
+    "git.ignoreMissingGitWarning": true, // 同上
+    "[c]": {
+        "files.encoding": "utf8" // 这样的格式可以对指定后缀的文件应用设置，如果你实在想用gbk，就这样设置吧。cpp同理。
+    },
+    "[c++]": {
+        "files.encoding": "utf8" // 这样的格式可以对指定后缀的文件应用设置，如果你实在想用gbk，就这样设置吧。cpp同理。
+    },
+    "[markdown]":  {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "files.associations": {
+        "iostream": "cpp",
+        "algorithm": "cpp",
+        "*.tcc": "cpp",
+        "random": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "regex": "cpp",
+        "utility": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "bitset": "cpp",
+        "cctype": "cpp",
+        "cfenv": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "cinttypes": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "codecvt": "cpp",
+        "complex": "cpp",
+        "condition_variable": "cpp",
+        "csetjmp": "cpp",
+        "csignal": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cuchar": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "optional": "cpp",
+        "ratio": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "future": "cpp",
+        "initializer_list": "cpp",
+        "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "limits": "cpp",
+        "mutex": "cpp",
+        "new": "cpp",
+        "scoped_allocator": "cpp",
+        "shared_mutex": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "thread": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp",
+        "valarray": "cpp",
+        "queue": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+    "io-run.executorMap.win32": {
+
+        ".c": {
+            "PATH": "C:\\MinGW\\bin;C:\\msys64\\mingw64\\bin;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin;C:\\Program Files\\CodeBlocks\\MinGW\\bin;C:\\cygwin\\bin;C:\\TDM-GCC-32\\bin;C:\\TDM-GCC-64\\bin",
+            "compileCmd": "gcc -g -static -std=gnu11 -lm -Wfatal-errors ${codeFile} -o ${codeFileNoExt.exe}",
+            "runCmd": "${dirCodeFileNoExt.exe} <${inputFile} >${outputFile}",
+            "cleanupCmd": "del ${codeFileNoExt.exe}"
+        },
+        ".cpp": {
+            "PATH": "C:\\MinGW\\bin;C:\\msys64\\mingw64\\bin;C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin;C:\\Program Files\\CodeBlocks\\MinGW\\bin;C:\\cygwin\\bin;C:\\TDM-GCC-32\\bin;C:\\TDM-GCC-64\\bin",
+            "compileCmd": "g++ -g -static -std=gnu++11 -Wfatal-errors ${codeFile} -o ${codeFileNoExt.exe}",
+            "runCmd": "${dirCodeFileNoExt.exe} <${inputFile} >${outputFile}",
+            "cleanupCmd": "del ${codeFileNoExt.exe}"
+        },
+        ".go": {
+            "PATH": "C:\\Go\\bin",
+            "compileCmd": "go build -o ${codeFileNoExt.exe} ${codeFile}",
+            "runCmd": "${dirCodeFileNoExt.exe} <${inputFile} >${outputFile}",
+            "cleanupCmd": "del ${codeFileNoExt.exe}"
+        },
+        ".java": {
+            "cleanupCmd": "del ${codeFileNoExt.class}"
+        },
+        ".kt": {
+            "cleanupCmd": "del ${codeFileNoExt.jar}"
+        },
+        ".ml": {
+            "compileCmd": "ocamlc ${codeFile} -o ${codeFileNoExt.exe}",
+            "cleanupCmd": "del ${codeFileNoExt.exe}"
+        },
+        ".pas": {
+            "compileCmd": "fpc -g ${codeFile} -o${codeFileNoExt.exe}",
+            "runCmd": "${dirCodeFileNoExt.exe} <${inputFile} >${outputFile}",
+            "cleanupCmd": "del ${codeFileNoExt.exe} ${codeFileNoExt.o}"
+        },
+        ".rs": {
+            "compileCmd": "rustc -g -o ${codeFileNoExt.exe} ${codeFile}",
+            "runCmd": "${dirCodeFileNoExt.exe} <${inputFile} >${outputFile}",
+            "cleanupCmd": "del ${codeFileNoExt.exe} ${codeFileNoExt.pdb}"
+        },
+        ".scala": {
+            "cleanupCmd": "del ${codeFileNoExt.class} ${codeFileNoExt$.class}"
+        },
+        ".vbs": {
+            "runCmd": "cscript ${dirCodeFile} <${inputFile} >${outputFile}"
+        },
+        ".ps1": {
+            "runCmd": "Powershell.exe -File ${dirCodeFile} <${inputFile} >${outputFile}"
+        },
+        ".cmd": {
+            "runCmd": "cmd.exe /C ${dirCodeFile} <${inputFile} >${outputFile}"
+        },
+        ".bat": {
+            "runCmd": "cmd.exe /C ${dirCodeFile} <${inputFile} >${outputFile}"
+        }
+    },
+}

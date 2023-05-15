@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+                "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+                "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+                "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+                "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+                "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "",
+                "path": [
+                    "${workspaceFolder}/**",
+                    "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+                    "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+                    "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+                    "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+                    "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+                    "C:/Users/iLGZH/Documents/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
+                ]
+            },
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "C:/Users/iLGZH/Documents/mingw64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
