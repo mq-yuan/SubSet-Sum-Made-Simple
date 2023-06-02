@@ -202,8 +202,6 @@ struct InputData openfile(const char *file_path) {
       }
       data.S.push_back(number);
     }
-
-    std::cout << std::endl;
     inputFile.close();
   } else {
     std::cout << "Failed to open file." << std::endl;
@@ -235,16 +233,19 @@ int main(int argc, char *argv[]) {
   std::vector<int> result = AllSubsetSums(data.S, data.target);
 
   // 输出所有可能的子集和数
-  std::cout << "Subset Sums:" << std::endl;
+  std::cout << "All possible Subset Sum of not greater than Target is "
+            << std::endl;
   for (int sum : result) {
     std::cout << sum << " ";
   }
   std::cout << std::endl
-            << "Length of subsetSums: " << result.size() << std::endl;
+            << "Length of Subset Sums: " << result.size() << std::endl;
 
   if (find(result.begin(), result.end(), data.target) != result.end())
     std::cout << "Exist Subset Sum is " << data.target << std::endl;
   else
-    std::cout << "Not Exist Subset Sum is " << data.target << std::endl;
+    std::cout << "Not Exist Subset Sum is " << data.target
+              << "The Most nearly Subset Sum is " << result[result.size() - 1]
+              << std::endl;
   return 0;
 }
