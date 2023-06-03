@@ -130,7 +130,7 @@ std::vector<SubsetSum> AllSubsetSumsHash(std::vector<int> &S, int u) {
 
   // 分治法合并
   std::vector<SubsetSum> result = XORSubsetSums(subsetSumsT, subsetSumsST, u);
-  return removeDuplicates(result);
+  return result;
 }
 
 // 计算所有子集和的可能情况
@@ -164,7 +164,6 @@ std::vector<int> AllSubsetSums(std::vector<int> &S, int u) {
       int j = pair.cardinality;
       Rl.push_back(z * b + l * j);
     }
-    removeDuplicates(Rl);
 
     if (l == 0) {
       for (const auto &x : Rl) {
@@ -233,10 +232,12 @@ int main(int argc, char *argv[]) {
   std::vector<int> result = AllSubsetSums(data.S, data.target);
 
   // 输出所有可能的子集和数
-  std::cout << "All possible Subset Sum of not greater than Target is "
-            << std::endl;
-  for (int sum : result) {
-    std::cout << sum << " ";
+  if (result.size() <= 50) {
+    std::cout << "All possible Subset Sum of not greater than Target is "
+              << std::endl;
+    for (int sum : result) {
+      std::cout << sum << " ";
+    }
   }
   std::cout << std::endl
             << "Length of Subset Sums: " << result.size() << std::endl;
